@@ -6,7 +6,10 @@ export default function Home() {
       {/* NAV */}
       <nav>
         <a href="#" className="logo">Swift<span>Reply</span></a>
-        <a href="#waitlist" className="nav-cta">Join Waitlist</a>
+        <div style={{display:'flex', gap:'12px', alignItems:'center'}}>
+          <a href="/contact" style={{fontSize:'14px', color:'var(--muted)', textDecoration:'none', fontWeight:500}}>Talk to us</a>
+          <a href="#waitlist" className="nav-cta">Join Waitlist</a>
+        </div>
       </nav>
 
       {/* HERO */}
