@@ -703,6 +703,155 @@ footer p {
   color: #444;
 }
 
+/* WAITLIST QUESTIONNAIRE */
+.wq-wrap {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.wq-eyebrow {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+
+.wq-heading {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(26px, 4vw, 40px);
+  font-weight: 600;
+  letter-spacing: -1.5px;
+  color: var(--white);
+  margin-bottom: 6px;
+  line-height: 1.1;
+}
+
+.wq-sub {
+  font-size: 15px;
+  color: #555;
+  font-weight: 300;
+  margin-bottom: 40px !important;
+}
+
+.wq-questions {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-bottom: 40px;
+}
+
+.wq-question {}
+
+.wq-q {
+  font-size: 14px;
+  font-weight: 500;
+  color: #ccc;
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+.wq-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.wq-pill {
+  background: transparent;
+  border: 1px solid #333;
+  color: #888;
+  font-family: 'Manrope', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  padding: 8px 16px;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+
+.wq-pill:hover {
+  border-color: var(--accent);
+  color: var(--white);
+}
+
+.wq-pill.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--white);
+  font-weight: 500;
+}
+
+.wq-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.wq-submit {
+  background: var(--accent);
+  color: var(--white);
+  font-family: 'Manrope', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 14px 30px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.wq-submit:hover { background: var(--accent-dark); }
+.wq-submit:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.wq-skip {
+  background: transparent;
+  border: none;
+  color: #444;
+  font-family: 'Manrope', sans-serif;
+  font-size: 13px;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.2s;
+}
+
+.wq-skip:hover { color: #888; }
+
+/* DONE STATE */
+.wq-done {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.wq-done-icon {
+  width: 56px;
+  height: 56px;
+  background: rgba(26, 106, 255, 0.15);
+  color: var(--accent);
+  font-size: 22px;
+  font-weight: 700;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+.wq-done-heading {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 600;
+  letter-spacing: -1.5px;
+  color: var(--white);
+  line-height: 1.1;
+}
+
 /* CONTACT PAGE */
 .contact-hero {
   min-height: 40vh;
