@@ -74,9 +74,9 @@ export default function WaitlistSection() {
 
       {step === "questions" && (
         <div className="wq-wrap">
-          <p className="wq-eyebrow">30 seconds · 4 quick questions</p>
-          <h2 className="wq-heading">Help us build the right thing.</h2>
-          <p className="wq-sub">No typing — just pick what fits.</p>
+          <p className="wq-eyebrow">You&apos;re on the list ✓</p>
+          <h2 className="wq-heading">While you&apos;re here —<br />would love to know a bit more.</h2>
+          <p className="wq-sub">Helps us build what you actually need. 30 seconds, no typing.</p>
 
           <div className="wq-questions">
 
@@ -154,13 +154,13 @@ export default function WaitlistSection() {
               onClick={submitAnswers}
               disabled={loading}
             >
-              {loading ? "Saving..." : "I'm in →"}
+              {loading ? "Saving..." : "Submit →"}
             </button>
             <button
               className="wq-skip"
               onClick={() => setStep("done")}
             >
-              Skip — just add me to the list
+              No thanks, I&apos;m good
             </button>
           </div>
         </div>
