@@ -35,13 +35,23 @@ export default function WaitlistSection() {
       return;
     }
     setEmailError(false);
+    // Save email immediately — they're on the list
+    await fetch("/api/waitlist", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email }),
+    });
     setStep("questions");
   }
 
   async function submitAnswers() {
     setLoading(true);
-    // TODO: send { email, ...answers } to Supabase / Resend
-    await new Promise((r) => setTimeout(r, 800));
+    // Update record with questionnaire answers
+    await fetch("/api/waitlist", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email, ...answers }),
+    });
     setStep("done");
     setLoading(false);
   }
@@ -64,7 +74,6 @@ export default function WaitlistSection() {
               onChange={(e) => { setEmail(e.target.value); setEmailError(false); }}
               onKeyDown={(e) => e.key === "Enter" && submitEmail()}
               style={emailError ? { borderColor: "#ff4444" } : {}}
-              autoFocus
             />
             <button onClick={submitEmail}>Get early access →</button>
           </div>
